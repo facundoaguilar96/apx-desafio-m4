@@ -1,0 +1,89 @@
+.contact-background {
+  background: linear-gradient(#408195, #00d287 80%);
+}
+.contact {
+  background-color: #141414;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  height: 660px;
+}
+
+@media (min-width: 769px) {
+  .contact {
+    flex-direction: row;
+    justify-content: center;
+    gap: 77px;
+  }
+}
+
+.contact__form {
+  width: 100%;
+  max-width: 396px;
+}
+
+.contact__content-title {
+}
+
+@media (min-width: 769px) {
+  .contact__content-title {
+    display: flex;
+    height: 530px;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+.contact__title {
+  font-family: "Montserrat";
+  font-size: 32px;
+  margin-top: 37px;
+  margin-bottom: 5px;
+}
+
+@media (min-width: 769px) {
+  .contact__title {
+    font-size: 48px;
+    margin-top: 20px;
+    margin-bottom: 37px;
+  }
+}
+
+.contact__label {
+  width: 100%;
+  font-family: "Poppins";
+  font-size: 13px;
+}
+
+.contact__input {
+  width: 100%;
+}
+
+.contact__input-nombre {
+  margin-bottom: 20px;
+  height: 45px;
+}
+.contact__input-email {
+  margin-bottom: 15px;
+  height: 45px;
+}
+.contact__input-mensaje {
+  margin-bottom: 60px;
+  height: 113px;
+}
+
+.contact__submit-cont {
+  width: 100%;
+}
+
+.contact__button {
+  width: 100%;
+  height: 45px;
+  font-family: "Poppins";
+  font-size: 16px;
+  background-color: #2c2c2c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
