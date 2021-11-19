@@ -3,7 +3,7 @@ function openWindow() {}
 function headerContent(el) {
   const headerEl = document.createElement("div");
   headerEl.innerHTML = `<div class="header">
-  <a href="./index.html"><img src="./logo-1.png" alt="" class="header__imagen-logo" /></a>
+  <a href="./index.html"><img src="./img/logo-claro.png" alt="" class="header__imagen-logo" /></a>
   <div class="header__rectagulos-conteiner open-window">
     <div class="header__rectangulo"></div>
     <div class="header__rectangulo"></div>

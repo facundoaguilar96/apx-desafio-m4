@@ -1,0 +1,22 @@
+.bienvenida {
+  background-image: url("./img/fondo-sec1.jpg");
+  height: 616px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.presentacion__saludo-title {
+  color: #ffffff;
+  font-family: "Montserrat";
+  font-size: "48px";
+}
+.presentacion__saludo-sub-title {
+  font-size: "32px";
+}
+
+.presentacion__content {
+  width: 100%;
+  text-align: center;
+  margin-top: 180px;
+}

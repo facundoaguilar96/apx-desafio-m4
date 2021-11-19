@@ -25,13 +25,22 @@
     <script defer src="./index.js"></script>
   </head>
   <body>
-    <div class="header-content"></div>
-
-    <h1>hola estas en index</h1>
-    <a href="./header.html">volver</a>
+    <div class="bienvenida">
+      <div class="header-content"></div>
+      <div class="presentacion"></div>
+    </div>
 
     <div class="contact-content"></div>
 
     <div class="footer-content"></div>
+
+    <template id="bienvenida-template">
+      <div class="presentacion__content">
+        <h1 class="presentacion__saludo-title">Hola</h1>
+        <h2 class="presentacion__saludo-sub-title presentacion__saludo-title">
+          Soy Facu
+        </h2>
+      </div>
+    </template>
   </body>
 </html>

@@ -3,7 +3,7 @@ function footerContent(el) {
 
   footerEl.innerHTML = `<footer class="footer">
   <div class="footer__logo-content">
-    <a href="./index.html"><img src="./logo-1.png" alt="" /></a>
+    <a href="./index.html"><img src="./img/logo-claro.png" alt="" /></a>
   </div>
   <div class="footer__redes-content">
     <a href="https://www.instagram.com/?hl=es" class="footer__redes-link">
