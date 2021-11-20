@@ -37,7 +37,6 @@
   .presentacion__content {
     display: flex;
     align-items: flex-end;
-    justify-content: center;
     width: 100%;
     min-height: 538px;
     background-color: #ffffff;
@@ -100,4 +99,100 @@
     font-size: 24px;
     color: #141414;
   }
+}
+
+/* my services */
+
+.services {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  min-height: 604px;
+}
+
+@media (min-width: 769px) {
+  .services {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.services__content {
+  width: 100%;
+  min-height: 1px;
+
+  gap: 80px;
+}
+
+@media (min-width: 769px) {
+  .services__content {
+    width: 100%;
+    min-height: 1px;
+    text-align: center;
+  }
+}
+
+.services__h2-container {
+  width: 100%;
+  height: 55px;
+  text-align: center;
+  grid-column-start: 1;
+  grid-column-end: span 3;
+}
+
+/* @media (min-width: 769px) {
+  .services__h2-container {
+    grid-column-start: 1;
+    grid-column-end: span 3;
+    /* padding: 100px; 
+  }
+} */
+
+.services__my-services-h2 {
+  font-family: "Montserrat";
+  font-size: 32px;
+}
+
+@media (min-width: 769px) {
+  .services__my-services-h2 {
+  }
+}
+
+.services__card-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+@media (min-width: 769px) {
+  .services__card-container {
+    margin-left: 90px;
+    max-width: 319px;
+  }
+}
+
+.services__card-img {
+  width: 140px;
+  height: 130px;
+}
+
+.services__card-datos-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.services__card-h3 {
+  margin: 0;
+  padding: 10px;
+  font-family: "Poppins";
+  font-size: 24px;
+}
+.services__card-p {
+  margin: 0;
+  font-family: "Poppins";
+  font-size: 16px;
 }

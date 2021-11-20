@@ -19,5 +19,11 @@ function main() {
       addPresentation(w);
     }
   });
+
+  getServices().then((res) => {
+    for (const w of res) {
+      addServices(w);
+    }
+  });
 }
 main();

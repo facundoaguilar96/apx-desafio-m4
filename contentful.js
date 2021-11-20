@@ -29,6 +29,14 @@ function addWelcome(params = {}) {
   container.appendChild(clone);
 }
 
+function buscarImagen(id, datos) {
+  // console.log(datos, id);
+  const imagen = datos.includes.Asset.find((asset) => {
+    return asset.sys.id == id;
+  });
+  return imagen;
+}
+
 //
 
 function getPresentation() {
@@ -39,11 +47,9 @@ function getPresentation() {
       return res.json();
     })
     .then((resp) => {
-      console.log(resp);
-
       const presentation = resp.items.map((item) => {
         const idImagen = item.fields.img.sys.id;
-        const imagen = buscarImagenPresentation(idImagen, resp);
+        const imagen = buscarImagen(idImagen, resp);
         linkImg = imagen.fields.file.url;
         return {
           titulo: item.fields.tituloH2,
@@ -51,11 +57,10 @@ function getPresentation() {
           url: linkImg,
         };
       });
-      console.log(presentation);
+
       return presentation;
     });
 }
-getPresentation();
 
 function addPresentation(params = {}) {
   const template = document.querySelector("#presentacion-temple");
@@ -73,10 +78,43 @@ function addPresentation(params = {}) {
   container.appendChild(clone);
 }
 
-function buscarImagenPresentation(id, datos) {
-  // console.log(datos, id);
-  const imagen = datos.includes.Asset.find((asset) => {
-    return asset.sys.id == id;
-  });
-  return imagen;
+//
+
+function getServices() {
+  return fetch(
+    "https://cdn.contentful.com/spaces/rhy3jleltni7/environments/master/entries?access_token=TfacPggm74tl4R5llYcG6dbs-HFB-lbyKEWZWjR0LwQ&content_type=services"
+  )
+    .then((res) => {
+      return res.json();
+    })
+    .then((resp) => {
+      console.log(resp);
+      const presentation = resp.items.map((item) => {
+        const idImagen = item.fields.imagen.sys.id;
+        const imagen = buscarImagen(idImagen, resp);
+        linkImg = imagen.fields.file.url;
+        return {
+          titulo: item.fields.tituloH2,
+          parrafo: item.fields.parrafo,
+          url: linkImg,
+        };
+      });
+
+      return presentation;
+    });
+}
+
+function addServices(params = {}) {
+  const template = document.querySelector("#services-template");
+  const container = document.querySelector(".services");
+
+  template.content.querySelector(".services__card-h3").textContent =
+    params.titulo;
+  template.content.querySelector(".services__card-p").textContent =
+    params.parrafo;
+  const imgCard = template.content.querySelector(".services__card-img");
+  imgCard.src = "http:" + params.url;
+
+  const clone = document.importNode(template.content, true);
+  container.appendChild(clone);
 }
