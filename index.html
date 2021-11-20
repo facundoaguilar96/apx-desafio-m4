@@ -21,25 +21,49 @@
     <link rel="stylesheet" href="./footer.css" />
     <script defer src="./footer.js"></script>
 
+    <script defer src="./contentful.js"></script>
+
     <link rel="stylesheet" href="./index.css" />
     <script defer src="./index.js"></script>
   </head>
   <body>
     <div class="bienvenida">
       <div class="header-content"></div>
-      <div class="presentacion"></div>
+      <div class="bienvenida-content"></div>
     </div>
+    <div class="presentacion"></div>
 
     <div class="contact-content"></div>
 
     <div class="footer-content"></div>
 
     <template id="bienvenida-template">
-      <div class="presentacion__content">
-        <h1 class="presentacion__saludo-title">Hola</h1>
-        <h2 class="presentacion__saludo-sub-title presentacion__saludo-title">
+      <div class="bienvenida__content">
+        <h1 class="bienvenida__saludo-title">Hola</h1>
+        <h2 class="bienvenida__saludo-sub-title bienvenida__saludo-title">
           Soy Facu
         </h2>
+      </div>
+    </template>
+
+    <template id="presentacion-temple">
+      <div class="presentacion__content">
+        <img class="presentacion__img-me" src="./img/img-me.png" alt="" />
+        <div class="presentacion__about-me-content">
+          <div class="presentacion__about-h2-content">
+            <h2 class="presentacion__about-me-h2">Soy me</h2>
+          </div>
+          <p class="presentacion__about-me-description">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Accusantium blanditiis veritatis quasi rem voluptatibus culpa
+            officiis facilis? Dolorem totam nulla harum deleniti suscipit quia
+            alias qui. Explicabo, a? Earum, temporibus! Lorem ipsum dolor sit
+            amet, consectetur adipisicing elit. Molestiae, deleniti cumque,
+            voluptate doloribus eligendi reprehenderit labore repellat fugit
+            neque suscipit inventore aliquam alias illum ea quisquam eius earum
+            eos pariatur.
+          </p>
+        </div>
       </div>
     </template>
   </body>

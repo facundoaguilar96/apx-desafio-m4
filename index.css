@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+/* bienvenida */
 .bienvenida {
   background-image: url("./img/fondo-sec1.jpg");
   height: 616px;
@@ -6,17 +10,94 @@
   background-position: center;
 }
 
-.presentacion__saludo-title {
+.bienvenida__saludo-title {
   color: #ffffff;
   font-family: "Montserrat";
   font-size: "48px";
+  margin-top: 150px;
 }
-.presentacion__saludo-sub-title {
+.bienvenida__saludo-sub-title {
   font-size: "32px";
+  margin: 0;
 }
+
+.bienvenida__content {
+  width: 100%;
+  text-align: center;
+}
+
+/* presentacion */
 
 .presentacion__content {
   width: 100%;
+  min-height: 538px;
+  background-color: #141414;
+}
+@media (min-width: 769px) {
+  .presentacion__content {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    min-height: 538px;
+    background-color: #ffffff;
+    gap: 50px;
+  }
+}
+
+.presentacion__about-me-content {
+  width: 100%;
+  text-align: left;
+  padding: 32px;
+}
+
+@media (min-width: 769px) {
+  .presentacion__about-me-content {
+    max-width: 610px;
+    text-align: left;
+    padding: 32px;
+  }
+}
+
+.presentacion__about-h2-content {
+  width: 100%;
   text-align: center;
-  margin-top: 180px;
+}
+
+.presentacion__img-me {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .presentacion__img-me {
+    display: inherit;
+    width: 380px;
+    height: 480px;
+    vertical-align: baseline;
+  }
+}
+
+.presentacion__about-me-h2 {
+  font-family: "Montserrat";
+  font-size: 32px;
+  color: #fafafa;
+}
+
+@media (min-width: 769px) {
+  .presentacion__about-me-h2 {
+    color: #141414;
+  }
+}
+
+.presentacion__about-me-description {
+  font-family: "Poppins";
+  font-size: 16px;
+  color: #fafafa;
+}
+
+@media (min-width: 769px) {
+  .presentacion__about-me-description {
+    font-size: 24px;
+    color: #141414;
+  }
 }
