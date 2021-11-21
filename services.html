@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FQ-Web-Home</title>
+
+    <link rel="stylesheet" href="./header.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="./header.js"></script>
+
+    <link rel="stylesheet" href="./footer.css" />
+    <script defer src="./footer.js"></script>
+
+    <script defer src="./contentful.js"></script>
+
+    <link rel="stylesheet" href="./services.css" />
+
+    <script defer src="./services.js"></script>
+  </head>
+  <body>
+    <div class="services-content">
+      <div class="header-content"></div>
+      <div class="services__title-container">
+        <h2 class="services__title">Mis Servicios</h2>
+      </div>
+      <div class="services__card-container"></div>
+    </div>
+    <div class="footer-content"></div>
+
+    <template id="services-temple">
+      <div class="services__card">
+        <div class="services__card-img-container">
+          <img class="services__card-img" src="./img/portfolio.png" alt="" />
+        </div>
+        <div class="services__card-info-container">
+          <div class="services__card-title-container">
+            <h3 class="services__card-title">trabajo XR52</h3>
+          </div>
+          <div class="services__card-p-container">
+            <p class="services__card-description">
+              Algo interesante sobre mi Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Exercitationem quibusdam unde illo, commodi
+              aperiam hic aliquam magnam tempora asperiores eum sequi non sit
+              necessitatibus debitis officiis, distinctio dolorem deleniti
+              tenetur!
+            </p>
+          </div>
+          <a href="./contacto.html" class="services__card-link">Contratar</a>
+        </div>
+      </div>
+    </template>
+  </body>
+</html>

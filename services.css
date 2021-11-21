@@ -1,0 +1,131 @@
+.services-content {
+  width: 100%;
+  min-height: 100px;
+  background-color: black;
+}
+@media (min-width: 769px) {
+  .services-content {
+    background-image: url("./img/services.jpg");
+    background-size: contain;
+    background-position: top;
+  }
+}
+
+.services__title-container {
+  width: 100%;
+  text-align: center;
+}
+@media (min-width: 769px) {
+  .services__title-container {
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+    height: 554px;
+    text-align: left;
+  }
+}
+
+.services__title {
+  font-family: "Montserrat";
+  font-size: 48px;
+  color: #ffffff;
+}
+@media (min-width: 769px) {
+  .services__title {
+    font-family: "Montserrat";
+    font-size: 48px;
+    color: #ffffff;
+    padding: 120px;
+  }
+}
+.services__card-container {
+  display: flex;
+  background-color: black;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 769px) {
+  .services__card-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+    align-items: center;
+    padding: 92px;
+  }
+}
+.services__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  max-width: 290px;
+}
+@media (min-width: 769px) {
+  .services__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    max-width: 290px;
+    background-color: black;
+    justify-self: center;
+    align-self: start;
+  }
+}
+.services__card-img {
+  width: 290px;
+  height: 200px;
+  margin-bottom: 15px;
+}
+@media (min-width: 769px) {
+}
+.services__card-img {
+}
+.services__card-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 290px;
+}
+@media (min-width: 769px) {
+}
+.services__card-title {
+  font-family: "Poppins";
+  font-size: 24px;
+  color: #dbdbdb;
+  margin: 0;
+}
+@media (min-width: 769px) {
+}
+.services__card-title-container {
+  width: 100%;
+  text-align: center;
+}
+@media (min-width: 769px) {
+}
+.services__card-p-container {
+  text-align: center;
+}
+@media (min-width: 769px) {
+}
+.services__card-description {
+  font-family: "Poppins";
+  font-size: 16px;
+  color: #dbdbdb;
+  margin: 0;
+}
+@media (min-width: 769px) {
+}
+.services__card-link {
+  color: #fc6f50;
+  text-decoration: none;
+  font-family: "Poppins";
+  font-size: 24px;
+}
+@media (min-width: 769px) {
+}

@@ -10,8 +10,8 @@ function headerContent(el) {
     <div class="header__rectangulo"></div>
   </div>
   <div class="header__menu-desktop-container">
-    <a href="./index.html" class="header__portfolio-link">Portfolio</a>
-    <a href="./index.html" class="header__servicios-link">Servicios</a>
+    <a href="./portfolio.html" class="header__portfolio-link">Portfolio</a>
+    <a href="./services.html" class="header__servicios-link">Servicios</a>
     <a href="./contacto.html" class="header__contacto-link">Contacto</a>
   </div>
 </div>
@@ -23,10 +23,10 @@ function headerContent(el) {
   </div>
   <div class="ventana__contenido">
     <div class="ventana__menu-container">
-      <a href="./index.html" class="header__portfolio-link ventana__menu"
+      <a href="./portfolio.html" class="header__portfolio-link ventana__menu"
         >Portfolio</a
       >
-      <a href="./index.html" class="header__servicios-link ventana__menu"
+      <a href="./services.html" class="header__servicios-link ventana__menu"
         >Servicios</a
       >
       <a href="./contacto.html" class="header__contacto-link ventana__menu"

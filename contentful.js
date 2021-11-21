@@ -118,3 +118,49 @@ function addServices(params = {}) {
   const clone = document.importNode(template.content, true);
   container.appendChild(clone);
 }
+
+//
+
+function getPortfolio() {
+  return fetch(
+    "https://cdn.contentful.com/spaces/rhy3jleltni7/environments/master/entries?access_token=TfacPggm74tl4R5llYcG6dbs-HFB-lbyKEWZWjR0LwQ&content_type=portfolio"
+  )
+    .then((res) => {
+      return res.json();
+    })
+    .then((resp) => {
+      console.log(resp);
+      const portfolio = resp.items.map((item) => {
+        const idImagen = item.fields.imagen.sys.id;
+        const imagen = buscarImagen(idImagen, resp);
+        linkImg = imagen.fields.file.url;
+        return {
+          titulo: item.fields.titulo,
+          parrafo: item.fields.parrafo,
+          url: linkImg,
+          link: item.fields.link,
+        };
+      });
+
+      return portfolio;
+    });
+}
+getPortfolio();
+
+function addPortfolio(params = {}) {
+  const template = document.querySelector("#portfolio-temple");
+  console.log(template);
+  const container = document.querySelector(".portfolio__card-container");
+  console.log(container);
+
+  template.content.querySelector(".portfolio__card-title").textContent =
+    params.titulo;
+  template.content.querySelector(".portfolio__card-description").textContent =
+    params.parrafo;
+  const imgCard = template.content.querySelector(".portfolio__card-img");
+  imgCard.src = "http:" + params.url;
+  template.content.querySelector(".portfolio__card-link").href = params.link;
+
+  const clone = document.importNode(template.content, true);
+  container.appendChild(clone);
+}
