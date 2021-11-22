@@ -30,7 +30,6 @@ function addWelcome(params = {}) {
 }
 
 function buscarImagen(id, datos) {
-  // console.log(datos, id);
   const imagen = datos.includes.Asset.find((asset) => {
     return asset.sys.id == id;
   });
@@ -88,7 +87,6 @@ function getServices() {
       return res.json();
     })
     .then((resp) => {
-      console.log(resp);
       const presentation = resp.items.map((item) => {
         const idImagen = item.fields.imagen.sys.id;
         const imagen = buscarImagen(idImagen, resp);
@@ -129,7 +127,6 @@ function getPortfolio() {
       return res.json();
     })
     .then((resp) => {
-      console.log(resp);
       const portfolio = resp.items.map((item) => {
         const idImagen = item.fields.imagen.sys.id;
         const imagen = buscarImagen(idImagen, resp);
@@ -149,9 +146,8 @@ getPortfolio();
 
 function addPortfolio(params = {}) {
   const template = document.querySelector("#portfolio-temple");
-  console.log(template);
+
   const container = document.querySelector(".portfolio__card-container");
-  console.log(container);
 
   template.content.querySelector(".portfolio__card-title").textContent =
     params.titulo;
